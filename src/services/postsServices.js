@@ -1,4 +1,5 @@
-const URL = 'http://localhost:8080/';
+const URL = 'https://backend.devlucas.online/';
+//const URL = 'http://localhost:8080/';
 
 export async function createPost(data){
     try {
