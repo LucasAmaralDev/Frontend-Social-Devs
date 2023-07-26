@@ -1,36 +1,38 @@
 .base{
     background-color: #252525;
-    padding: 5px 0;
+    padding: 2px 0;
     display: flex;
     justify-content: center;
 }
 
+
+
 .header{
     display: flex;
     justify-content: space-between;
-    width: 98%;
+    width: 96%;
     align-items: center;
 }
 
 .header h1{
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.55rem;
     font-weight: bolder;
     margin-left: 20px;
+    margin: unset;
 }
 
 .header nav{
     display: flex;
     justify-content: flex-end;
     gap: 20px;
-    width: 30%;
     max-width: 500px;
     align-items: center;
 }
 
 .header nav a{
     color: #fff;
-    font-size: 1.3rem;
+    font-size: 1.06rem;
     font-weight: 400;
     text-decoration: none;
     transition: 300ms;

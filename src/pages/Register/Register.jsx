@@ -1,17 +1,18 @@
 import { useForm } from "react-hook-form";
 import { registerAccount } from "../../services/userServices";
 import styles from "./Register.module.css";
+import { useState } from "react";
 
 
 
 export function Register() {
+    const [clicked, setClicked] = useState(false)
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     async function enviarFormulario(data) {
 
         try {
-            console.log(data)
-
+            setClicked(true)
             const result = await registerAccount(data);
 
             console.log(result)
@@ -23,11 +24,13 @@ export function Register() {
 
             if (result.error) {
                 alert(result.error)
+                setClicked(false)
             }
 
         } catch (error) {
 
             console.log(error)
+            setClicked(false)
 
         }
 
@@ -115,7 +118,7 @@ export function Register() {
                         </select>
                     </div>
 
-                    <button type="submit">Cadastre-se</button>
+                    <button type="submit" disabled={clicked} style={clicked ? { backgroundColor: "#ccc" } : {}}>Login</button>
 
                     {/* Ir para o login */}
                     <a href="/login">Já tem uma conta? Faça Login</a>

@@ -1,26 +1,38 @@
 import { useForm } from "react-hook-form";
 import { login } from "../../services/userServices";
 import styles from "./Login.module.css";
+import { useState } from "react";
 
 
 export function Login() {
+    const [clicked, setClicked] = useState(false)
 
     const { register, handleSubmit, formState: { errors } } = useForm();
 
 
     async function enviarFormulario(data) {
 
-        const result = await login(data)
-        console.log(result)
+        try {
 
-        if (result.token) {
-            localStorage.setItem("token", result.token);
-            window.location.href = "/"
+            setClicked(true)
+            const result = await login(data)
+            console.log(result)
+
+            if (result.token) {
+                localStorage.setItem("token", result.token);
+                window.location.href = "/"
+            }
+
+            if (result.error) {
+                alert(result.error)
+                setClicked(false)
+            }
+
+        } catch (error) {
+
         }
 
-        if (result.error) {
-            alert(result.error)
-        }
+
 
     }
 
@@ -49,8 +61,9 @@ export function Login() {
                         {errors.password && <span>Password é Obrigatório</span>}
                     </div>
 
-                    <button type="submit">Login</button>
-                    
+                    <button type="submit" disabled={clicked} style={clicked ? { backgroundColor: "#ccc" } : {}}>Login</button>
+
+
                     {/* Ir para o signup */}
                     <a href="/register">Não tem uma conta? Cadastre-se</a>
 

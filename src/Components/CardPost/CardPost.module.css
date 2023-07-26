@@ -1,0 +1,64 @@
+
+
+.cardpost{
+    width: 80%;
+    max-width: 1100px;
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 6px;
+    padding-bottom: 15px;
+    background-color: #fff;
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.496);
+    transition: 300ms;
+}
+
+.cardpost:hover{
+    transform: scale(1.001);
+    box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.374);
+}
+
+.headerCardPost{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+    text-decoration: none;
+    color: rgb(3, 3, 3);
+}
+
+.user img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.user h1{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.user span{
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: #636363;
+}
+
+.date{
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: #636363;
+}
+
+.contentCardPost{
+    padding: 12px;
+
+}
