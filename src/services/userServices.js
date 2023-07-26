@@ -1,4 +1,6 @@
-const URL = 'http://localhost:8080/';
+'use strict';
+
+const URL = 'https://backend.devlucas.online/';
 
 export async function login(data) {
 
