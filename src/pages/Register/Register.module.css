@@ -1,0 +1,134 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 10px;
+    min-height: 100vh;
+
+
+}
+
+.registerPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 56px;
+    border-radius: 80px;
+    padding: 30px 10px 50px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    width: 400px;
+    
+
+}
+
+.headerRegisterPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.headerRegisterPage img {
+    width: 100px;
+    height: 100px;
+}
+
+.headerRegisterPage h1{
+    font-size: 1.7rem;
+    color: #333333;
+}
+
+.headerRegisterPage p{
+    font-size: 1.1rem;
+    color: #333333;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+}
+
+.logoSocial{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px;
+    border: 0.2px solid #33333308;
+}
+
+.logoSocial h1{
+    font-size: 2.4rem;
+    color: #333333;
+    background-color: #fff;
+}
+
+.logoSocial span{
+    color: #fff;
+    background-color: #333333;
+    padding-bottom: 1px;
+    padding-right: 1px;
+}
+
+.form div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.form div label{
+    font-size: 1.2rem;
+}
+
+.form div input{
+    width: 280px;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid #c5c5c5;
+    padding: 5px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.form div input:focus{
+    outline: none;
+    border-bottom: 1px solid #000;
+}
+
+.form button{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.form button:hover{
+    background-color: #333;
+}
+
+.inputDate{
+    width: unset !important;
+}
+
+.form a {
+    text-decoration: none;
+    color: #484747;
+    font-size: 1.1rem;
+}
+
+.form a:hover {
+    text-decoration: underline;
+}
