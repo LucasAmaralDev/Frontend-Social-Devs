@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Login } from "./pages/Login/Login";
 import { Register } from "./pages/Register/Register";
+import { Home } from "./pages/Home/Home";
 
 export function RouteProtected({ children }) {
 
@@ -22,7 +23,7 @@ export function Navigations() {
 
                 <Route path="/" element={
                     <RouteProtected>
-                        <h1>Bem vindo</h1>
+                        <Home />
                     </RouteProtected>
                 } />
 
