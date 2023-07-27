@@ -36,9 +36,7 @@ export function Navigations() {
                 } />
 
                 <Route path='/profile/:username' element={
-                    <RouteProtected>
                         <UserProfile />
-                    </RouteProtected>
                 } />
 
 
