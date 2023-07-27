@@ -2,6 +2,7 @@ import style from "./CardPost.module.css";
 
 
 export function CardPost(props) {
+    console.log(props.post)
 
     return (
         <div className={style.cardpost}>

@@ -1,0 +1,144 @@
+.cardProfileInfo{
+    display: flex;
+    padding: 2px 10px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.profileInfo{
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+    padding: 30px 20px;
+    margin: 10px 0 0 0;
+    border-radius: 5px;
+    box-shadow: 0px 0 2px 1px rgb(159, 159, 159);
+    background-color: rgb(255, 255, 255);
+}
+
+.cardAvatarInfo{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.cardAvatarInfo h1{
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-top: -3px;
+    color: rgb(77, 77, 77);
+}
+
+.cardAvatarInfo p{
+    font-size: 1.1rem !important;
+    font-weight: 300;
+    margin-top: -2px;
+    color: rgb(77, 77, 77);
+}
+
+.nameUsername{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 15px;
+}
+
+.nameUsername p{
+    font-size: 0.8rem;
+    font-weight: 300;
+    margin-top: -6px;
+    color: rgb(77, 77, 77);
+}
+
+.profileInfo img{
+    width: 100px;
+    border-radius: 50%;
+}
+
+.bio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.modalEditProfile{
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.modalEditProfile button{
+    width: 100%;
+    border: none;
+    background-color: #f8f8f8;
+    font-size: 1rem;
+    box-shadow: 0px 0 2px 0.2px rgba(0, 0, 0, 0.655);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.modalEditProfile button:hover{
+    background-color: #e8e8e8;
+}
+
+.modalEditProfile button:active{
+    background-color: #d8d8d8;
+}
+
+.moreInfoProfile{
+    display: flex;
+}
+
+
+
+
+
+
+.divInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.divInfo h1{
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: -3px;
+    color: rgb(77, 77, 77);
+}
+
+.divInfo p{
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-top: -2px;
+    color: rgb(77, 77, 77);
+}
+
+.posts{
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;  
+}
+
+.divPosts{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;  
+    align-items: center;  
+}

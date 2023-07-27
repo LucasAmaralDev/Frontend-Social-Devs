@@ -4,11 +4,10 @@ import styles from './Modal.module.css'
 import { useState } from 'react';
 
 export function Modal(props) {
-        const [countCharacters, setCountCharacters] = useState(180)
+    const [countCharacters, setCountCharacters] = useState(180)
     const [textPost, setTextPost] = useState("")
 
     function countCharactersText(event) {
-        console.log("chamou")
         const text = event.target.value
         const count = 180 - text.length
         setCountCharacters(count)
@@ -23,27 +22,29 @@ export function Modal(props) {
                 alert("O campo texto é obrigatório")
                 return
             }
-    
-            const retorno = await createPost({text: textPost})
-    
-            if(retorno.error){
+
+            const retorno = await createPost({ text: textPost })
+
+            if (retorno.error) {
                 alert(retorno.error)
                 return
             }
-    
-            if (retorno.id){
-                props.carregarPosts()
+
+            if (retorno.id) {
+                if (props.carregarPosts) {
+                    props.carregarPosts()
+                }
             }
-            
+
             props.modalPost()
-            
+
         } catch (error) {
 
             alert(error)
-            
+
         }
 
-        
+
     }
 
     return (
@@ -61,7 +62,7 @@ export function Modal(props) {
                     <textarea onChange={(e) => countCharactersText(e)} type="text" id="text" name="text" placeholder="Texto" maxLength="180" >
                     </textarea>
                     <p>{countCharacters} restantes</p>
-                    
+
                 </div>
 
                 <div className={styles.footerModal}>

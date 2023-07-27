@@ -12,6 +12,12 @@ export function Home() {
 
     async function carregarPosts() {
         const result = await getPosts()
+
+        if (result.error){
+            localStorage.removeItem("token")
+            window.location.href = "/login"
+        }
+
         console.log(result)
         setPosts(result)
     }
@@ -30,7 +36,7 @@ export function Home() {
             <div className={styles.posts}>
 
                 {
-                    posts && posts.map((post) => {
+                    posts.length > 0 && posts.map((post) => {
                         return (
                             <CardPost key={post.id} post={post} />
                         )

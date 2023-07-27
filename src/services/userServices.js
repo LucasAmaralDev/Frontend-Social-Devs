@@ -1,7 +1,8 @@
-'use strict';
+import { verificarToken } from "./verifyToken";
+let objeto = {};
 
-const URL = 'https://backend.devlucas.online/';
-//const URL = 'http://localhost:8080/';
+//const URL = 'https://backend.devlucas.online/';
+const URL = 'http://localhost:8080/';
 
 export async function login(data) {
 
@@ -14,15 +15,17 @@ export async function login(data) {
             },
             body: JSON.stringify(data)
         });
-    
+
         const json = await response.json();
-    
-        return json;
-        
+
+        objeto = verificarToken(json)
+
+        return objeto;
+
     } catch (error) {
 
         return ({ error });
-        
+
     }
 
 }
@@ -38,21 +41,23 @@ export async function registerAccount(data) {
             },
             body: JSON.stringify(data)
         });
-    
+
         const json = await response.json();
-    
-        return json;
-        
+
+        objeto = verificarToken(json);
+
+        return objeto;
+
     } catch (error) {
 
         return ({ error });
-        
+
     }
 
 }
 
 
-export async function getPosts(){
+export async function getPosts() {
 
     try {
 
@@ -69,15 +74,69 @@ export async function getPosts(){
                 'Authorization': `Bearer ${token}`
             }
         });
-    
+
         const json = await response.json();
-    
-        return json;
-        
+
+        objeto = verificarToken(json);
+
+        return objeto;
+
     } catch (error) {
 
         return ({ error });
-        
+
     }
 
+}
+
+export async function getMyProfile() {
+
+    try {
+
+        const token = localStorage.getItem('token');
+
+        if (!token) {
+            return window.location.href = '/login';
+        }
+
+        const response = await fetch(URL + 'myprofile', {
+            method: 'GET',
+            headers: {
+                'Content-type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            }
+        });
+
+        const json = await response.json();
+
+        objeto = verificarToken(json);
+
+        return objeto;
+
+    } catch (error) {
+
+        return ({ error });
+
+    }
+
+}
+
+export async function editProfile(data){
+
+    const token = localStorage.getItem('token');
+
+    const resultado = await fetch(URL + 'editProfile', {
+        method: 'PUT',
+        headers: {
+            'Content-type': 'application/json',
+            "Authorization": `Bearer ${token}`
+        },
+        body: JSON.stringify(data)
+    });
+
+    const json = await resultado.json();
+
+    objeto = verificarToken(json);
+
+    return objeto;
 }
