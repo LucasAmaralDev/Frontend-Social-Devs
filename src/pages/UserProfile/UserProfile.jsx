@@ -5,7 +5,6 @@ import { Header } from '../../Components/Header/Header'
 import { getUserProfile } from '../../services/userServices'
 import styles from './UserProfile.module.css'
 import { CardPost } from '../../Components/CardPost/CardPost'
-import { ModalEditProfile } from '../../Components/ModalEditProfile/ModalEditProfile'
 import { useParams } from 'react-router-dom'
 
 

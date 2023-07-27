@@ -12,6 +12,16 @@ export function Home() {
     const [myInfo, setMyInfo] = useState(null)
 
     async function carregarPosts() {
+
+        const token = localStorage.getItem("token")
+
+        console.log(token)
+
+        if (!token) {
+            window.location.href = "/login"
+            return
+        }
+
         const result = await getPosts()
 
         if (result.error){

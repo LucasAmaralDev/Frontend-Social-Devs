@@ -2,7 +2,7 @@ import style from "./CardPost.module.css";
 
 
 export function CardPost(props) {
-    const link = `profile/${props.post.user.username}`
+    const link = `/profile/${props.post.user.username}`
 
     return (
         <div className={style.cardpost}>

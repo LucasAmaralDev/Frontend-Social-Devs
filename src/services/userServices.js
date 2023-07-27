@@ -125,18 +125,11 @@ export async function getMyProfile() {
 export async function getUserProfile(username) {
 
     try {
-
-        const token = localStorage.getItem('token');
-
-        if (!token) {
-            return window.location.href = '/login';
-        }
         
         const response = await fetch(URL + `profile/${username}`, {
             method: 'GET',
             headers: {
-                'Content-type': 'application/json',
-                'Authorization': `Bearer ${token}`
+                'Content-type': 'application/json'
             }
         });
 
