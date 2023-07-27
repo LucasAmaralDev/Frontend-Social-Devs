@@ -3,6 +3,7 @@ import { Login } from "./pages/Login/Login";
 import { Register } from "./pages/Register/Register";
 import { Home } from "./pages/Home/Home";
 import Myprofile from "./pages/MyProfile/Myprofile";
+import UserProfile from "./pages/UserProfile/UserProfile";
 
 export function RouteProtected({ children }) {
 
@@ -31,6 +32,12 @@ export function Navigations() {
                 <Route path="/myProfile" element={
                     <RouteProtected>
                         <Myprofile />
+                    </RouteProtected>
+                } />
+
+                <Route path='/profile/:username' element={
+                    <RouteProtected>
+                        <UserProfile />
                     </RouteProtected>
                 } />
 

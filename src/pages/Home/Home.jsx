@@ -5,10 +5,11 @@ import { CardPost } from "../../Components/CardPost/CardPost"
 import styles from './Home.module.css'
 
 
-const { getPosts } = require('../../services/userServices')
+const { getPosts, getMyInfo } = require('../../services/userServices')
 
 export function Home() {
     const [posts, setPosts] = useState([])
+    const [myInfo, setMyInfo] = useState(null)
 
     async function carregarPosts() {
         const result = await getPosts()
@@ -18,14 +19,26 @@ export function Home() {
             window.location.href = "/login"
         }
 
-        console.log(result)
         setPosts(result)
+    }
+
+    async function carregarMinhasInformacoes() {
+        const result = await getMyInfo()
+
+        if (result.error) {
+            alert(result.error)
+            return
+        }
+
+        setMyInfo(result)
+        console.log(result)
     }
 
 
     useEffect(() => {
 
         carregarPosts()
+        carregarMinhasInformacoes()
     }, [])
 
     return (

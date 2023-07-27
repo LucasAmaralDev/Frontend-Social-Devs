@@ -121,6 +121,60 @@ export async function getMyProfile() {
 
 }
 
+
+export async function getUserProfile(username) {
+
+    try {
+
+        const token = localStorage.getItem('token');
+
+        if (!token) {
+            return window.location.href = '/login';
+        }
+        
+        const response = await fetch(URL + `profile/${username}`, {
+            method: 'GET',
+            headers: {
+                'Content-type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            }
+        });
+
+        const json = await response.json();
+
+        objeto = verificarToken(json);
+
+        return objeto;
+
+    } catch (error) {
+
+        return ({ error });
+
+    }
+
+}
+
+export async function getMyInfo() {
+
+    const token = localStorage.getItem('token');
+
+    const respultado = await fetch(URL + 'myInfo', {
+        method: 'GET',
+        headers: {
+            'Content-type': 'application/json',
+            'Authorization': `Bearer ${token}`}
+    });
+    
+    const json = await respultado.json();
+
+    objeto = verificarToken(json);
+
+    return objeto;
+
+}
+
+
+
 export async function editProfile(data){
 
     const token = localStorage.getItem('token');

@@ -19,7 +19,8 @@ export function Header(props) {
         <div className={styles.base}>
 
             <section className={styles.header}>
-                <div className={styles.nameSite}>
+                <div className={styles.nameSite}
+                onClick={() => {window.location.href = '/'}}>
                     <h1>Social Devs</h1>
                 </div>
 

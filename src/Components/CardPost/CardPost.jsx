@@ -2,14 +2,14 @@ import style from "./CardPost.module.css";
 
 
 export function CardPost(props) {
-    console.log(props.post)
+    const link = `profile/${props.post.user.username}`
 
     return (
         <div className={style.cardpost}>
 
             <div className={style.headerCardPost}>
 
-                <a className={style.user} href="#">
+                <a className={style.user} href={link}>
                     {props.post.user.avatar ? <img src={props.post.user.avatar} alt="avatar" /> : <img src="https://www.w3schools.com/howto/img_avatar.png" alt="avatar" />}
                     <h1>{props.post.user.name}</h1> <span>@{props.post.user.username}</span>
                 </a>

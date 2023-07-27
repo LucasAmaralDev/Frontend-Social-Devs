@@ -14,6 +14,15 @@
     align-items: center;
 }
 
+.nameSite{
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.nameSite:hover{
+    scale: 1.015;
+}
+
 .header h1{
     color: #fff;
     font-size: 1.55rem;
