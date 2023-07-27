@@ -111,3 +111,8 @@
 
 
 
+@media (max-width: 950px){
+    .modal{
+        width: 90%;
+    }
+}

@@ -142,3 +142,71 @@
     justify-content: center;  
     align-items: center;  
 }
+
+@media (max-width: 930px){
+    .cardAvatarInfo{
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .cardAvatarInfo h1{
+        font-size: 2.5rem;
+        margin: unset;
+    }
+
+    .cardAvatarInfo p{
+        font-size: 0.9rem !important;
+        margin: unset;
+        text-align: center;
+    }
+
+    .nameUsername{
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .nameUsername p{
+        font-size: 0.7rem;
+    }
+
+    .profileInfo{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        margin-bottom: 15px;
+    }
+
+    .profileInfo img{
+        width: 80px;
+    }
+
+    .modalEditProfile{
+        flex-direction: column;
+    }
+
+    .divInfo{
+        margin: 5px;
+    }
+
+    .divInfo h1{
+        font-size: 1rem;
+    }
+
+    .divInfo p{
+        font-size: 0.7rem;
+    }
+
+    .moreInfoProfile{
+        padding-top: 10px;
+        flex-direction: column;
+    }
+
+    .publicacoes{
+        padding-bottom: 8px;
+    }
+}

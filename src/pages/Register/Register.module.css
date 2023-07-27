@@ -133,3 +133,25 @@
 .form a:hover {
     text-decoration: underline;
 }
+
+@media (max-width: 768px){
+    .registerPage{
+        width: 96%;
+    }
+
+    .headerRegisterPage h1{
+        font-size: 1.5rem;
+    }
+
+    .headerRegisterPage p{
+        font-size: 1rem;
+    }
+
+    .form div input{
+        width: 99%;
+    }
+
+    .form button{
+        width: 99%;
+    }
+}

@@ -1,4 +1,4 @@
-.base{
+.base {
     background-color: #252525;
     padding: 2px 0;
     display: flex;
@@ -7,23 +7,23 @@
 
 
 
-.header{
+.header {
     display: flex;
     justify-content: space-between;
     width: 96%;
     align-items: center;
 }
 
-.nameSite{
+.nameSite {
     cursor: pointer;
     transition: 300ms;
 }
 
-.nameSite:hover{
+.nameSite:hover {
     scale: 1.015;
 }
 
-.header h1{
+.header h1 {
     color: #fff;
     font-size: 1.55rem;
     font-weight: bolder;
@@ -31,7 +31,7 @@
     margin: unset;
 }
 
-.header nav{
+.header nav {
     display: flex;
     justify-content: flex-end;
     gap: 20px;
@@ -39,7 +39,7 @@
     align-items: center;
 }
 
-.header nav a{
+.header nav a {
     color: #fff;
     font-size: 1.06rem;
     font-weight: 400;
@@ -47,6 +47,35 @@
     transition: 300ms;
 }
 
-.header nav a:hover{
+.header nav a:hover {
     color: #ccc;
+}
+
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header nav {
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    .header nav a {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    .header h1 {
+        font-size: 1.2rem;
+    }
+
+    .header nav a {
+        font-size: 1rem;
+    }
+    
 }

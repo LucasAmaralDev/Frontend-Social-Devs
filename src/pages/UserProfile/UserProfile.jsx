@@ -123,7 +123,7 @@ export default function UserProfile() {
                                 
 
                                 <div className={styles.posts}>
-                                    <h1>Publicações</h1>
+                                    <h1 className={styles.publicacoes}>Publicações</h1>
 
                                     <div className={styles.divPosts}>
                                         {

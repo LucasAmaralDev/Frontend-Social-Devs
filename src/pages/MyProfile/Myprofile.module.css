@@ -142,3 +142,60 @@
     justify-content: center;  
     align-items: center;  
 }
+
+@media (max-width: 930px){
+    .profileInfo{
+        flex-direction: column;
+    }
+
+    .cardAvatarInfo{
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cardAvatarInfo h1{
+        font-size: 2.5rem;
+        margin: unset;
+    }
+
+    .cardAvatarInfo p{
+        font-size: 0.9rem !important;
+        margin: unset;
+    }
+
+    .nameUsername{
+        align-items: center;
+    }
+
+    .nameUsername p{
+        font-size: 0.7rem;
+    }
+
+    .profileInfo img{
+        width: 80px;
+    }
+
+    .bio{
+        margin-top: 5px;
+    }
+
+    .divInfo h1{
+        font-size: 1rem;
+    }
+
+    .divInfo p{
+        font-size: 0.8rem;
+    }
+
+    .moreInfoProfile{
+        flex-direction: column;
+    }
+
+    .modalEditProfile button{
+        width: 100%;
+        padding: 3px 0;
+    }
+}

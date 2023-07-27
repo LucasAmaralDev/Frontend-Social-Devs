@@ -128,3 +128,18 @@
 .form a:hover {
     text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+    .loginPage{
+        width: 96%;
+        padding: 35px 10px 80px 10px;
+    }
+
+    .form div input{
+        width: 99%;
+    }
+
+    .form button{
+        width: 99%;
+    }
+}

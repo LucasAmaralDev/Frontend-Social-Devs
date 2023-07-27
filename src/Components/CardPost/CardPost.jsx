@@ -11,7 +11,10 @@ export function CardPost(props) {
 
                 <a className={style.user} href={link}>
                     {props.post.user.avatar ? <img src={props.post.user.avatar} alt="avatar" /> : <img src="https://www.w3schools.com/howto/img_avatar.png" alt="avatar" />}
-                    <h1>{props.post.user.name}</h1> <span>@{props.post.user.username}</span>
+                    <div>
+                        <h1>{props.post.user.name}</h1>
+                        <span>@{props.post.user.username}</span>
+                    </div>
                 </a>
 
                 <div className={style.date}>
@@ -27,7 +30,7 @@ export function CardPost(props) {
                         }
                     </span>
 
-                </div>  
+                </div>
 
             </div>
 

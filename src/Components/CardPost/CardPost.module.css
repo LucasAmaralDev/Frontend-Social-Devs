@@ -62,3 +62,13 @@
     padding: 12px;
 
 }
+
+@media (max-width: 930px){
+    .cardpost{
+        width: 98%;
+    }
+
+    .date{
+        font-size: 0.6rem;
+    }
+}

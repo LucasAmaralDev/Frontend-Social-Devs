@@ -43,8 +43,8 @@ export function Header(props) {
                     logado ?
 
                     <nav>
-                        <a href="/">Pagina Inicial</a>
-                        <a href="#" onClick={modalPost}>Nova Publicação</a>
+                        <a href="/">Inicio</a>
+                        <a href="#" onClick={modalPost}>Publicar</a>
                         <a href="/myprofile">Perfil</a>
                         <a href="#" onClick={logout}>Sair</a>
 

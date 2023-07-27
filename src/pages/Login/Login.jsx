@@ -46,7 +46,7 @@ export function Login() {
                     <div className={styles.logoSocial}>
                         <h1>Social<span>DEVS</span></h1>
                     </div>
-                    <h1>Cadastro</h1>
+                    <h1>Login</h1>
                 </div>
 
                 <form className={styles.form} onSubmit={handleSubmit(enviarFormulario)}>
