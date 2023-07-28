@@ -1,6 +1,8 @@
 # FRONTEND REDE SOCIAL
 <p>Aqui informo a você um pouco do que ja foi feito no frontend da aplicação ate o momento!!
 
+<a src= "https://socialdevs.devlucas.online/">Deploy do projeto. Clique aqui!</a>
+
 </p>
 <br>
 
